@@ -14,6 +14,17 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+body {
+  background: white;
+  color: black;
+}
+
+.body {
+  background: black;
+  color: white;
+}
+
+/* HEADER START */
 
 header {
   display: flex;
@@ -96,6 +107,19 @@ nav ul li a:hover {
   color: #23262f;
 }
 
+.body nav ul li a {
+  color: #ffffff8e;
+}
+
+.body nav ul li a:hover {
+  transition: linear 0.3s;
+  color: #ffffff;
+}
+
+.body .active {
+  color: #ffffff;
+}
+
 .menus {
   display: flex;
   width: auto;
@@ -172,6 +196,7 @@ button {
   position: relative;
   font-size: 20px;
   margin-right: 24px;
+  cursor: pointer;
 }
 
 .green_circle {
@@ -226,6 +251,11 @@ button {
   border-radius: 90px;
 }
 
+.body .Connect_Wallet {
+  color: white;
+  border: 2px solid #e6e8ec;
+}
+
 @media screen and (max-width: 990px) {
   .logo {
     margin-right: 15px;
@@ -266,11 +296,19 @@ button {
     transition: linear 0.3s;
     visibility: hidden;
     opacity: 0;
+    z-index: 9999;
+    background: white;
+    padding-bottom: 25px;
+    box-shadow: 0px 60px 39px -52px rgb(55 114 255 / 28%);
+  }
+
+  .body nav {
+    background: black;
   }
 
   .nav_active {
     transition: linear 0.3s;
-    top: 40px;
+    top: 45px;
 
     visibility: visible;
     opacity: 1;
@@ -327,5 +365,187 @@ button {
   .Upload,
   .Connect_Wallet {
     margin: 0;
+  }
+}
+/* HEADER END */
+
+/* main */
+
+main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 128px;
+}
+
+.main_container {
+  display: flex;
+  width: 85%;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main_subTitle {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  text-transform: uppercase;
+
+  color: #777e91;
+}
+
+.main_title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  color: #23262f;
+  padding: 8px 0 24px 0;
+}
+
+.main_btn {
+  display: flex;
+  width: auto;
+  border: 2px solid #e6e8ec;
+  border-radius: 90px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: #23262f;
+  padding: 16px 24px;
+}
+
+.body .main_subTitle {
+  color: #ffffff;
+  opacity: .7;
+}
+.body .main_title {
+  color: #ffffff;
+}
+.body .main_btn {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 700px) {
+  .main_subTitle {
+    font-size: 10px;
+  }
+  .main_title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    padding: 7px 0 18px 0;
+  }
+
+  .main_btn {
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12x 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main_subTitle {
+    font-size: 8px;
+  }
+  .main_title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    padding: 4px 0 14px 0;
+  }
+
+  .main_btn {
+    font-weight: 600;
+    font-size: 12px;
+    padding: 9px 14px;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .main_subTitle {
+    font-size: 6px;
+  }
+  .main_title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 4px 0 10px 0;
+  }
+
+  .main_btn {
+    font-weight: 600;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
+/* light_dark */
+
+.light_dark {
+  position: fixed;
+  top: 75px;
+  right: -1%;
+  font-size: 22px;
+  display: flex;
+  transition: linear 0.3s;
+  cursor: pointer;
+  padding: 8px;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.body .light_dark {
+  transition: linear 0.3s;
+  background: white;
+  color: black;
+}
+
+.light_dark:hover {
+  transition: linear 0.3s;
+  right: 0%;
+  font-size: 25px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .light_dark {
+    font-size: 14px;
+    padding: 4px;
+  }
+
+  .light_dark:hover {
+    transition: linear 0.3s;
+    right: 0%;
+    font-size: 16px;
   }
 }
